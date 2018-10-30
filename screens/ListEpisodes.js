@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
 
-export default class ListEpisodes extends Component {
+export default class ListEpisodes extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -19,5 +19,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
- 
+
 });

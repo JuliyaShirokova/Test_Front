@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
 
-export default class MainScreen extends Component {
+export default class MainScreen extends React.Component{
   render() {
     return (
       <View style={styles.container}>
-      <Text>Main</Text>
+         <Text>Main</Text>
        </View>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -19,5 +20,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
- 
+
 });

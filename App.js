@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {createStackNavigator, StackNavigator, TabNavigator} from 'react-navigation';
-import {ListEpisodes} from './screens/ListEpisodes';
-import {MainScreen} from './screens/MainScreen';
+import ListEpisodes from './screens/ListEpisodes';
+import MainScreen from './screens/MainScreen';
 
 
 export default class App extends Component {
@@ -13,13 +13,11 @@ export default class App extends Component {
   }
 }
 
-const RootSrack = createStackNavigator({
-  Home : MainSreen,
-  Episodes : ListEpisodes
-},
-{
-  initialRouteName: 'Home'
-});
+const RootStack = createStackNavigator({
+      Home: {screen: MainScreen},
+      Episodes: {screen: ListEpisodes},
+      initialRouteName: 'Home'
+    });
 
 const styles = StyleSheet.create({
   container: {
@@ -28,5 +26,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
- 
+
 });
